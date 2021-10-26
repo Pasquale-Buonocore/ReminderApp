@@ -1,0 +1,53 @@
+{   
+    "Amazon" : [
+        {
+            "Object_name": "Empty",
+            "Price": "Empty",
+            "Link": "Empty"
+        }
+    ],
+    "Deadlines" : [
+        {
+            "Object_name": "Empty",
+            "Expiration_date": "Empty",
+            "State": "Empty"
+        }
+    ],
+    "KeyDate" : [
+        {
+            "Event_name": "Empty",
+            "Expiration_date" : "Empty"
+        }
+    ],
+    "Projects": [
+        {
+            "Project_name" : "Empty",
+            "State": "Empty"
+        }
+    ],
+    "Finance": [
+        {
+            "Name" : "Empty",
+            "Type" : "Empty",
+            "Price" : "Empty"
+        }
+    ],
+    "Book": [
+        {
+            "Name" : "Empty",
+            "Status" : "Empty"
+        }
+    ],
+    "Udemy": [
+        {
+            "Name" : "Empty",
+            "Status" : "Empty"
+        }
+    ],
+    "ToDo": [
+        {
+            "Name" : "Empty",
+            "Status" : "Empty"
+        }
+    ]
+}

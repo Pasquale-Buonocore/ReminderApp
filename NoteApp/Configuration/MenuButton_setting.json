@@ -1,0 +1,9 @@
+{"MenuButtons": 
+    [{"name": "Deadlines", "image_selected": "./Images/Menu/Selected/Deadlines.png", "image_not_selected": "./Images/Menu/NotSelected/Deadlines.png"},
+     {"name": "To Do", "image_selected": "./Images/Menu/Selected/ToDo.png", "image_not_selected": "./Images/Menu/NotSelected/ToDo.png"},
+     {"name": "Amazon", "image_selected": "./Images/Menu/Selected/Amazon.png", "image_not_selected": "./Images/Menu/NotSelected/Amazon.png"},
+     {"name": "Book", "image_selected": "./Images/Menu/Selected/Book.png", "image_not_selected": "./Images/Menu/NotSelected/Book.png"},
+     {"name": "Projects", "image_selected": "./Images/Menu/Selected/Project.png", "image_not_selected": "./Images/Menu/NotSelected/Project.png"},
+     {"name": "Udemy", "image_selected": "./Images/Menu/Selected/Udemy.png", "image_not_selected": "./Images/Menu/NotSelected/Udemy.png"},
+     {"name": "Finance", "image_selected": "./Images/Menu/Selected/Finance.png", "image_not_selected": "./Images/Menu/NotSelected/Finance.png"},
+     {"name": "KeyDate", "image_selected": "./Images/Menu/Selected/ImportantDate.png", "image_not_selected": "./Images/Menu/NotSelected/ImportantDate.png"}]}
