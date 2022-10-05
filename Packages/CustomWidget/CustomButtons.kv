@@ -1,0 +1,34 @@
+#:kivy 1.0.9
+
+<PersonalButton>:
+    # Properties
+    button_image : image_id
+    button_label : lbl_id
+
+    # Values
+    size_hint : (None, None)
+    width : button_width
+    height : button_height
+    pos: self.parent.pos
+    background_color : (1,1,1,0)
+
+    # Events
+    on_release: self.setImage(app.root)
+
+    Label:
+        id : lbl_id 
+        size_hint : (None, None)
+        color: 1,1,1,1
+        bold: True
+        pos: self.parent.pos[0], self.parent.pos[1]
+        size: 50,0
+        halign: 'left'
+        font_size : 10
+        text: 'TO DO LIST'
+
+    Image:
+        id: image_id
+        size: Button_image_size
+        pos: self.parent.pos[0] , self.parent.pos[1] + 5 
+        allow_stretch: True
+        source: ''

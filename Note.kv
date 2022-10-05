@@ -1,0 +1,103 @@
+#:kivy 1.0.9
+
+## ###################
+##  Define constant  #
+## ###################
+
+#:set button_width 45
+#:set button_height 45
+#:set Grid_padding [20,20]
+#:set Grid_spacing [25,25]
+#:set Button_image_size [45,45]
+#:set canvas_background_color [0,0,0,0.5]
+#:set DeadlineListColor [0,0,0,0.5]
+#:set Widsize [250,40]
+#:import Factory kivy.factory.Factory
+
+<CustomPopup>:
+    markup: True
+    title: 'My Custom Kivy Popup'
+    auto_dismiss: False
+    size_hint: (None, None)
+    size: (100, 200)
+
+    BoxLayout:
+        orientation: 'vertical'
+        BoxLayout:
+            size_hint: 1, 0.9
+            Label:
+                text: 'Hello'
+            Label:
+                text: 'Kivy'
+        BoxLayout:
+            orientation: 'vertical'
+            Label:
+                text: 'Linux'
+            Label:
+                text: 'Python'
+
+        GridLayout:
+            rows: 1
+            row_force_default: True
+            row_default_height: '46dp'
+            col_force_default: True
+            col_default_width: '200dp'
+            Button:
+                text: 'Close this popup'
+                on_release: root.dismiss()
+            Button:
+                text: 'Cancel'
+                on_release: root.dismiss()
+
+<Scroll>:
+    markup: True
+    grid_wid : scroll_grid_id
+    size_hint : (3, None)
+
+    GridLayout:
+        id : scroll_grid_id
+        cols: 1
+        spacing: 10,10
+        size_hint: 1, None
+        height: self.minimum_height
+
+<LayoutApp>:
+    # Define properties
+    menu_buttons_wid : menu_buttons_id
+    scroll_wid : scroll_id
+    
+    ## Set the App background
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: root.width, root.height
+            source: 'Images\WallPapers\Mauntain.jpg'
+
+    # Grid containg buttons - y: 0.3
+    GridLayout:
+        id : menu_buttons_id
+        cols : 4
+        rows : 2
+        size_hint : 1, 0.3
+        padding : Grid_padding
+        spacing : Grid_spacing
+
+    # Scroll View: y: 0.6
+    Scroll:
+        size_hint: 1, 0.6
+        id : scroll_id
+
+    Button:
+        size_hint: 0.1, 0.1
+        background_color: 1,1,1,0
+        on_release: root.UpdateDatabase()
+        
+        Image:
+            size: 40, 40
+            pos: self.parent.pos[0] , self.parent.pos[1] + 5
+            allow_stretch: True
+            source: "./Images/Widget/button_plus.png"
+        
+        
+
+                

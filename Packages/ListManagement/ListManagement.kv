@@ -1,0 +1,63 @@
+#:kivy 1.0.9
+
+<Deadlineclass>:
+    markup: True
+    task_wid : task_id
+    data_wid : data_id
+    state_wid : state_id
+
+    size_hint_y: 10
+    height : Widsize[1]
+
+    canvas:
+        Color:
+            rgba: DeadlineListColor
+        RoundedRectangle:
+            pos: self.pos
+            size: Widsize
+
+    Button:
+        pos: self.parent.pos[0], self.parent.pos[1]
+        size: Widsize
+        background_color : (1,1,1,0)
+        on_release: Factory.CustomPopup().open()
+
+    # Label that contains tha constant part of a Deadlist
+    Label:
+        color: 1,1,1,1
+        text: 'TASK' + ' ' * 50  + 'EXP. DATE' + ' ' * 10 + 'STATE'
+        size: (Widsize[0],0)
+        halign: 'left'
+        pos: self.parent.pos[0] ,self.parent.pos[1] + 30
+        bold: True
+        font_size: 10
+    
+    # Label that containt the message
+    Label:
+        id: task_id
+        font_size: 11
+        size: (Widsize[0],0)
+        text_size: (Widsize[0],0)
+        pos: 38 ,self.parent.pos[1] + 15
+        # text to modify
+        text: 'Deadline task'
+
+    # Label that containt the data
+    Label:
+        id: data_id
+        font_size: 11
+        size: (Widsize[0],0)
+        text_size: (Widsize[0],0)
+        pos: 162 ,self.parent.pos[1] + 15
+        # text to modify
+        text: '01/01/2021'
+
+    # Label that containt the state
+    Label:
+        id: state_id
+        font_size: 11
+        size: (Widsize[0],0)
+        text_size: (Widsize[0],0)
+        pos: 240 ,self.parent.pos[1] + 15
+        # text to modify
+        text: 'W,P'
